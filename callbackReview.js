@@ -1,6 +1,8 @@
 /* Declare and Define the functions here that will make the function calls below work properly */
 
-
+var first = function(x, cb) {
+  cb(x[0])
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
@@ -12,7 +14,9 @@ first(names, function(firstName){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var last = function(x, cb) {
+  cb(x[x.length -1])
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -27,6 +31,13 @@ last(names, function(lastName){
 
 //have the contains function return a boolean value for if the name is in the array or not.
 
+var contains = function(str, x, cb) {
+  for (var i = 0; i < x.length; i++) {
+    if (str === x[i]) {
+      return cb(true)
+    }
+   } cb(false)
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains('Colt', names, function(yes){
@@ -40,10 +51,11 @@ contains('Colt', names, function(yes){
 
 
 
-/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+!!!!!!!!!!!!!!!come back to!!!!!!!!!/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
-
+var map = function(x, cb) {
+  cb(x)
+};
 
 var numbers = [1,2,3,4,5];
 //Produces a new array of values by mapping each value in list through a transformation function
@@ -56,7 +68,17 @@ map(numbers, function(num){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var uniq = function(x, cb) {
+  for (var i = 0; i < x.length; i++) {
+    for (var j = i + 1; j < x.length; j++) {
+      if (x[i] === x[j]) {
+        x.splice(j, 1);
+        j--;
+      }
+    }
+  }
+  cb(x)
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -69,12 +91,16 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var each = function(x, cb) {
+  for (var i = 0; i < x.length; i++) {
+    cb(x[i], i)
+  }
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item)
 });
 
 
@@ -82,7 +108,13 @@ each(names, function(item, indice){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var getUserById = function(str, x, cb) {
+  for (var i = 0; i < x.length; i++) {
+    if (str === x[i].id) {
+    cb(x[i])
+    }
+  }
+};
 
 
 var users = [
@@ -112,9 +144,13 @@ getUserById('16t', users, function(user){
 
 
 
-/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+!!!!!!!!fix it !!!!!!!!!!!!/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var find = function(x, cb) {
+  for (var i = 0; i < x.length; i++) {
+  }
+  cb(x[i])
+};
 
 
 //Looks through each value in the list, returning the first one that passes a truth test 
