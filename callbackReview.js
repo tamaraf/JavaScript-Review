@@ -1,4 +1,4 @@
-/* Declare and Define the functions here that will make the function calls below work properly */
+/* Declare and Define the functions here that will make the function calls below work properly *//
 
 var first = function(x, cb) {
   cb(x[0])

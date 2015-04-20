@@ -1,12 +1,10 @@
 /* Make sure you do these last */
 
-/*
 
-Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
 
-plusOneSum([1, 2, 3, 4]); // 14
+// Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
 
-*/
+// plusOneSum([1, 2, 3, 4]); // 14
 
 
 
@@ -16,7 +14,7 @@ Write a function that accepts a multi dimensional array and returns a flattened 
 
 flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
 
-*/
+
 
 
 

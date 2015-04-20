@@ -1,6 +1,6 @@
 var threeItems = [1,2,3];
 //create a function named 'last' that returns the last item from 'threeItems'
-//alert the result of your function
+//alert the result of your function//
 
 var last = function(x) {
 	return x[x.length - 1]

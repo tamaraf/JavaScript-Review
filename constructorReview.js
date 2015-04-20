@@ -1,4 +1,4 @@
-//Create a Animal Constructor that has the following parameters. species, name, legs, color, food (which is an array of foods they can eat).
+//Create a Animal Constructor that has the following parameters. species, name, legs, color, food (which is an array of foods they can eat).//
 
 var Animal = function(species, name, legs, color, food) {
   this.species = species;
