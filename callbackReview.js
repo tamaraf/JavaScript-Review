@@ -51,10 +51,14 @@ contains('Colt', names, function(yes){
 
 
 
-!!!!!!!!!!!!!!!come back to!!!!!!!!!/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 var map = function(x, cb) {
-  cb(x)
+  newArr = [];
+  for (var i = 0; i < x.length; i++) {
+    newArr.push(cb(x[i]));
+  }
+  return newArr;
 };
 
 var numbers = [1,2,3,4,5];
@@ -144,12 +148,14 @@ getUserById('16t', users, function(user){
 
 
 
-!!!!!!!!fix it !!!!!!!!!!!!/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 var find = function(x, cb) {
   for (var i = 0; i < x.length; i++) {
+    if (cb(x[i])) {
+      return x[i];
+    }
   }
-  cb(x[i])
 };
 
 
